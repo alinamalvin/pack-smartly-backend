@@ -1,0 +1,2 @@
+class TripStylesController < ApplicationController
+end

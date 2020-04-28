@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  get '/test', to: 'application#test'
+  resources :packing_lists, only: :index
+  resources :trip_styles, only: :index
+  resources :weathers, only: :index
 end

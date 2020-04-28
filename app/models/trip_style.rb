@@ -1,0 +1,2 @@
+class TripStyle < ApplicationRecord
+end
