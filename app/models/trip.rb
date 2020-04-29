@@ -1,3 +1,3 @@
-class Trip< ApplicationRecord
-    has_many :packing_lists
+class Trip < ApplicationRecord
+    has_many :items
 end
