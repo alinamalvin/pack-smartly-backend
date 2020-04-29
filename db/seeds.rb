@@ -6,7 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Weather.create(name: "hot")
-Weather.create(name: "cold")
-Weather.create(name: "humid/raining")
-Weather.create(name: "snowing")
+
+Trip.create(weather: 'hot', style: 'camping')
+Trip.create(weather: 'cold', style: 'camping')
+Trip.create(weather: 'hot', style: 'cultural')
+Trip.create(weather: 'cold', style: 'caltural')
+Trip.create(weather: 'hot', style: 'beach')
+Trip.create(weather: 'cold', style: 'ski')
+
+PackingList.create([{items: 'headlamp', trip_id: 2}, {items: 'matches', trip_id: 2}])

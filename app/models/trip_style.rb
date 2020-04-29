@@ -1,2 +1,0 @@
-class TripStyle < ApplicationRecord
-end

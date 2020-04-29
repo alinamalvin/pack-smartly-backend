@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+AJAX Requests: 
+1.get /tripstyles
+2.create /packinglist
+3.delete /packingkist
+
+

@@ -1,4 +1,3 @@
 class PackingList < ApplicationRecord
-  belongs_to :weather
-  belongs_to :trip_styles
+  belongs_to :trip
 end
