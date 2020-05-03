@@ -18,8 +18,7 @@ ActiveRecord::Schema.define(version: 2020_04_29_185950) do
   end
 
   create_table "trips", force: :cascade do |t|
-    t.string "weather"
-    t.string "style"
+    t.string "name"
   end
 
 end
