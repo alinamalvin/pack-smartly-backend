@@ -4,6 +4,12 @@ class ItemsController < ApplicationController
     render :json => Item.all, :include => :trip
     end 
 
+    def create 
+        trip = Trip.find_by(name: params[:trip])
+        Item.create(name: params[:name], trip: trip)
+        render :json => item 
+    end 
+
     def destroy
        item = Item.find(params[:id])
        render :json => {id: params[:id], message: "Record was successfully deleted"}
