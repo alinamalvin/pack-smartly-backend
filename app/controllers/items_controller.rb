@@ -1,13 +1,13 @@
 class ItemsController < ApplicationController
 
     def index
-    render :json => Item.all, :include => :trip
+    render :json => Item.all, :include => :trip, :status => 200
     end 
 
-    def create 
+    def create  
         trip = Trip.find_by(name: params[:trip])
-        Item.create(name: params[:name], trip: trip)
-        render :json => item 
+        item = Item.create(name: params[:name], trip: trip)
+        render :json => item, :status => 201
     end 
 
     def destroy
