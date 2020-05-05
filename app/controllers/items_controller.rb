@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
 
     def destroy
        item = Item.find(params[:id])
-       render :json => {id: params[:id], message: "Record was successfully deleted"}
+       render :json => {id: params[:id], message: "Item was successfully deleted"}
     # tap into sqlite3 exceptions that raised and create error message 
     #    if item .destroy 
     #     render :json => {id: params[:id], message: "Record was successfully deleted"}
@@ -20,5 +20,6 @@ class ItemsController < ApplicationController
     #     render :json => {message: "there was an error"}
     #    end 
     end 
+    
 
 end
