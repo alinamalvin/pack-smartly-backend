@@ -5,14 +5,14 @@ class ItemsController < ApplicationController
     end 
 
     def create  
-        trip = Trip.find_by(name: params[:trip])
+        trip = Trip.find_by(name: params[:trip]) 
         item = Item.create(name: params[:name], trip: trip)
         render :json => item, :include => :trip, :status => 201
     end 
 
     def destroy
-       item = Item.find(params[:name])
-       render :json => {id: params[:name], message: "Item was successfully deleted"}
+       item = Item.find(params[:id])
+       render :json => {id: params[:id], message: "Item was successfully deleted"}
     # tap into sqlite3 exceptions that raised and create error message 
     #    if item .destroy 
     #     render :json => {id: params[:id], message: "Record was successfully deleted"}
